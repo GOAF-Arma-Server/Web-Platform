@@ -1,0 +1,35 @@
+{
+  "name": "@repo/trpc",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    "./client": "./src/client.ts",
+    "./react": "./src/react.tsx",
+    "./server": "./src/server.ts"
+  },
+  "scripts": {
+    "lint": "biome check",
+    "format": "biome format --write",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@repo/api": "workspace:*",
+    "@tanstack/react-query": "5.80.6",
+    "@trpc/client": "11.1.2",
+    "@trpc/react-query": "11.1.2",
+    "@trpc/server": "11.1.2",
+    "superjson": "2.2.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.0.0",
+    "@repo/typescript-config": "workspace:*",
+    "@types/react": "19.2.2",
+    "react": "19.2.0",
+    "typescript": "5.9.2"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  }
+}

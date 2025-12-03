@@ -1,0 +1,11 @@
+import { publicProcedure, router } from '@/trpc';
+
+export const healthRouter = router({
+  check: publicProcedure.query(() => {
+    return {
+      status: 'ok',
+      timestamp: new Date().toISOString(),
+      service: 'goaf-api',
+    };
+  }),
+});
